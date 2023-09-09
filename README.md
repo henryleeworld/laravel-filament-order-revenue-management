@@ -1,6 +1,6 @@
 # Laravel 10 Filament 訂單收入管理
 
-Filament 管理面板採用快速建立簡捷的 TALL（Tailwind CSS、Alpine.js、Laravel 和 Livewire）堆疊應用程式的工具組，協助暸解訂單金額以及趨勢，讓您可以掌握營運狀況，並將此資訊做為擬定營運及成長關鍵績效指標（KPI）的參考依據。
+Filament 訂單收入管理採用快速建立簡捷的 TALL（Tailwind CSS、Alpine.js、Laravel 和 Livewire）堆疊應用程式的工具組，協助暸解訂單金額以及趨勢，讓您可以掌握營運狀況，並將此資訊做為擬定營運及成長關鍵績效指標（KPI）的參考依據。
 
 ## 使用方式
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
