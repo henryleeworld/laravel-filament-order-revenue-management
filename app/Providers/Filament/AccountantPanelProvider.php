@@ -25,7 +25,8 @@ class AccountantPanelProvider extends PanelProvider
             ->id('accountant')
             ->path('accountant')
             ->login()
-            ->brandName('Accounting Interface')
+            ->registration()
+            ->brandName(__('Accounting Interface'))
             ->colors([
                 'primary' => Color::Green,
             ])

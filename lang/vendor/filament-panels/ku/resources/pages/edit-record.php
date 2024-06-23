@@ -2,26 +2,30 @@
 
 return [
 
-    'title' => 'دەستکاری :label',
+    'title' => 'دەستکاریکردنی :label',
 
-    'breadcrumb' => 'دەستکاری',
+    'breadcrumb' => 'دەستکاریکردن',
 
     'form' => [
 
         'actions' => [
 
             'cancel' => [
-                'label' => 'ڕەتکردنەوە',
+                'label' => 'پاشگەزبوونەوە',
             ],
 
             'save' => [
-                'label' => 'هەڵگرتن',
+                'label' => 'نوێکردنەوە',
             ],
 
         ],
 
+    ],
+
+    'content' => [
+
         'tab' => [
-            'label' => 'دەستکاری',
+            'label' => 'دەستکاریکردن',
         ],
 
     ],
@@ -29,7 +33,7 @@ return [
     'notifications' => [
 
         'saved' => [
-            'title' => 'هەڵگیرا',
+            'title' => 'نوێکرایەوە',
         ],
 
     ],

@@ -10,7 +10,7 @@ return [
 
         'login' => [
             'before' => '或',
-            'label' => '登入到您的帳號',
+            'label' => '登入您的帳號',
         ],
 
     ],
@@ -18,7 +18,7 @@ return [
     'form' => [
 
         'email' => [
-            'label' => '電子郵件地址',
+            'label' => '電子郵件',
         ],
 
         'name' => [
@@ -27,7 +27,6 @@ return [
 
         'password' => [
             'label' => '密碼',
-            'validation_attribute' => '密碼',
         ],
 
         'password_confirmation' => [
@@ -47,8 +46,8 @@ return [
     'notifications' => [
 
         'throttled' => [
-            'title' => '嘗試註冊次數過多',
-            'body' => '請在 :seconds 秒後重試。',
+            'title' => '註冊次數過多',
+            'body' => '請稍後 :seconds 秒再試。',
         ],
 
     ],

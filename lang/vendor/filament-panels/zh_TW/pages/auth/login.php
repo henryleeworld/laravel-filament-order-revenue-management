@@ -13,16 +13,12 @@ return [
             'label' => '註冊新帳號',
         ],
 
-        'request_password_reset' => [
-            'label' => '忘記密碼？',
-        ],
-
     ],
 
     'form' => [
 
         'email' => [
-            'label' => 'E-Mail 位址',
+            'label' => '電子郵件',
         ],
 
         'password' => [

@@ -59,7 +59,7 @@ class ProductResource extends Resource
                         ->schema([
                             Forms\Components\Radio::make('status')
                                 ->label(__('Status'))
-                                ->options(self::$statuses),
+                                ->options(array_map('__', static::$statuses)),
                             Forms\Components\Select::make('category_id')
                                 ->label(__('Category'))
                                 ->relationship('category', 'name'),
@@ -114,10 +114,15 @@ class ProductResource extends Resource
     {
         return $infolist
             ->schema([
-                Infolists\Components\TextEntry::make('name'),
-                Infolists\Components\TextEntry::make('price'),
-                Infolists\Components\TextEntry::make('is_active'),
-                Infolists\Components\TextEntry::make('status'),
+                Infolists\Components\TextEntry::make('name')
+                    ->label(__('Name')),
+                Infolists\Components\TextEntry::make('price')
+                    ->label(__('Price')),
+                Infolists\Components\TextEntry::make('is_active')
+                    ->label(__('Is active')),
+                Infolists\Components\TextEntry::make('status')
+                    ->label(__('Status'))
+                    ->formatStateUsing(fn (string $state): string => __($state)),
             ]);
     }
 
@@ -140,7 +145,7 @@ class ProductResource extends Resource
                     ->label(__('Is active')),
                 Tables\Columns\SelectColumn::make('status')
                     ->label(__('Status'))
-                    ->options(self::$statuses),
+                    ->options(array_map('__', static::$statuses)),
                 Tables\Columns\TextColumn::make('category.name')
                     ->label(__('Category name')),
                 Tables\Columns\TextColumn::make('tags.name')

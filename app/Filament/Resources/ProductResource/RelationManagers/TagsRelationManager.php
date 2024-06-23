@@ -24,6 +24,16 @@ class TagsRelationManager extends RelationManager
             ]);
     }
 
+    protected static function getModelLabel(): string
+    {
+        return __('tag');
+    }
+
+    protected function getTableHeading(): string
+    {
+        return __('Tags');
+    }
+
     public function table(Table $table): Table
     {
         return $table

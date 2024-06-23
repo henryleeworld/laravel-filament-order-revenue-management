@@ -23,14 +23,22 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name'),
-                Forms\Components\TextInput::make('email')->email(),
+                Forms\Components\TextInput::make('name')
+                    ->label(__('Name')),
+                Forms\Components\TextInput::make('email')
+                    ->label(__('Email'))
+                    ->email(),
             ]);
     }
 
     public static function getBreadcrumb(): string
     {
         return __('User');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('user');
     }
 
     public static function getNavigationLabel(): string

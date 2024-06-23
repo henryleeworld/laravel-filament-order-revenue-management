@@ -1,4 +1,4 @@
-# Laravel 10 Filament 訂單收入管理
+# Laravel 11 Filament 訂單收入管理
 
 Filament 訂單收入管理採用快速建立簡捷的 TALL（Tailwind CSS、Alpine.js、Laravel 和 Livewire）堆疊應用程式的工具組，協助暸解訂單金額以及趨勢，讓您可以掌握營運狀況，並將此資訊做為擬定營運及成長關鍵績效指標（KPI）的參考依據。
 
@@ -36,8 +36,8 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/cpXtLE1.png)
+![](https://i.imgur.com/ThL5cXy.png)
 > 可以清楚的知道這個月哪幾天訂單數特別多
 
-![](https://i.imgur.com/Cq156hg.png)
+![](https://i.imgur.com/jqgbWte.png)
 > 查看所有產品的清單和相關狀態

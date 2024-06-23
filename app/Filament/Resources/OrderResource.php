@@ -22,9 +22,24 @@ class OrderResource extends Resource
 
     protected static ?int $navigationSort = 1;
 
+    public static function getBreadcrumb(): string
+    {
+        return __('Order');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('order');
+    }
+
     public static function getNavigationBadge(): ?string
     {
         return Order::whereDate('created_at', today())->count() ? __('NEW') : '';
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('Orders');
     }
 
     public static function getPages(): array
@@ -55,10 +70,14 @@ class OrderResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('created_at'),
-                Tables\Columns\TextColumn::make('product.name'),
-                Tables\Columns\TextColumn::make('user.name'),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->label(__('Created at')),
+                Tables\Columns\TextColumn::make('product.name')
+                    ->label(__('Product')),
+                Tables\Columns\TextColumn::make('user.name')
+                    ->label(__('User')),
                 Tables\Columns\TextColumn::make('price')
+                    ->label(__('Price'))
                     ->money('usd')
                     ->getStateUsing(function (Order $record): float {
                         return $record->price / 100;
@@ -80,6 +99,7 @@ class OrderResource extends Resource
 //                        ->icon('heroicon-o-check-badge')
 //                        ->action(fn (Order $record) => $record->update(['is_completed' => true])),
                     Tables\Actions\Action::make('Change is completed')
+                        ->label(__('Change is completed'))
                         ->icon('heroicon-o-check-badge')
                         ->fillForm(function (Order $order) {
                             return ['is_completed' => $order->is_completed];
@@ -96,6 +116,7 @@ class OrderResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                     Tables\Actions\BulkAction::make('Mark as Completed')
+                        ->label(__('Mark as Completed'))
                         ->icon('heroicon-o-check-badge')
                         ->requiresConfirmation()
                         ->action(fn (Collection $records) => $records->each->update(['is_completed' => true]))

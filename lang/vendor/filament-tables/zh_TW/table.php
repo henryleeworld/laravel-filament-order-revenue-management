@@ -2,34 +2,11 @@
 
 return [
 
-    'column_toggle' => [
-
-        'heading' => '欄位',
-
-    ],
-
-    'columns' => [
-
-        'text' => [
-            'more_list_items' => '更多 :count 筆資料',
-        ],
-
-    ],
-
     'fields' => [
-
-        'bulk_select_page' => [
-            'label' => '選擇／取消選擇批次操作的所有項目。',
-        ],
-
-        'bulk_select_record' => [
-            'label' => '選擇／取消選擇用於批量操作的 :key 項目。',
-        ],
 
         'search' => [
             'label' => '搜尋',
             'placeholder' => '搜尋',
-            'indicator' => '搜尋',
         ],
 
     ],
@@ -52,6 +29,8 @@ return [
 
     'empty' => [
         'heading' => '未找到資料',
+
+        'description' => '新增一個 :model 來開始。',
     ],
 
     'filters' => [
@@ -106,4 +85,22 @@ return [
 
     ],
 
+    'summary' => [
+
+        'heading' => '摘要',
+
+        'subheadings' => [
+            'all' => '全部 :label',
+            'page' => '這一頁',
+        ],
+
+        'summarizers' => [
+
+            'sum' => [
+                'label' => '總和',
+            ],
+
+        ],
+
+    ],
 ];
