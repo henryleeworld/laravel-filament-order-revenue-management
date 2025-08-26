@@ -21,7 +21,7 @@ class TagResource extends Resource
 
     protected static ?int $navigationSort = 4;
 
-    // protected static ?string $navigationGroup = 'Classifiers';
+    protected static ?string $navigationGroup = 'Classifiers';
 
     public static function getModelLabel(): string
     {
@@ -30,7 +30,7 @@ class TagResource extends Resource
 
     public static function getNavigationGroup(): ?string
     {
-        return __('Classifiers');
+        return __(static::$navigationGroup);
     }
 
     public static function getNavigationLabel(): string
