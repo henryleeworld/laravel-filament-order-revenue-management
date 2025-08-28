@@ -9,11 +9,13 @@ use Flowframe\Trend\TrendValue;
 
 class OrdersPerDayChart extends ChartWidget
 {
+    protected ?string $heading = 'Orders per day';
+
     protected int | string | array $columnSpan = 'full';
 
-    protected static ?string $maxHeight = '300px';
+    protected ?string $maxHeight = '300px';
 
-    protected static ?string $heading = 'Orders per day';
+    protected static ?int $sort = 1;
 
     protected function getData(): array
     {
@@ -24,7 +26,7 @@ class OrdersPerDayChart extends ChartWidget
             )
             ->perDay()
             ->count();
-
+ 
         return [
             'datasets' => [
                 [

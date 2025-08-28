@@ -2,20 +2,22 @@
 
 namespace App\Filament\Pages;
 
+use BackedEnum;
 use Filament\Pages\Page;
+use Filament\Support\Icons\Heroicon;
 
 class ContactUs extends Page
 {
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Envelope;
 
-    protected static string $view = 'filament.pages.contact-us';
+    protected string $view = 'filament.pages.contact-us';
 
-    public function getTitle(): string
+    public static function getNavigationLabel(): string
     {
         return __('Contact us');
     }
 
-    public static function getNavigationLabel(): string
+    public function getTitle(): string
     {
         return __('Contact us');
     }

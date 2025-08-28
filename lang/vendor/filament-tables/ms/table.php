@@ -2,13 +2,17 @@
 
 return [
 
-    'column_toggle' => [
+    'column_manager' => [
 
         'heading' => 'Kolum',
 
     ],
 
     'columns' => [
+
+        'actions' => [
+            'label' => 'Tindakan|Tindakan',
+        ],
 
         'text' => [
 
@@ -83,7 +87,7 @@ return [
         ],
 
         'filter' => [
-            'label' => 'Penapis',
+            'label' => 'Tapisan',
         ],
 
         'group' => [
@@ -94,7 +98,7 @@ return [
             'label' => 'Tindakan terbuka',
         ],
 
-        'toggle_columns' => [
+        'column_manager' => [
             'label' => 'Togol lajur',
         ],
 
@@ -113,27 +117,27 @@ return [
         'actions' => [
 
             'apply' => [
-                'label' => 'Gunakan penapis',
+                'label' => 'Gunakan tapisan',
             ],
 
             'remove' => [
-                'label' => 'Buang penapis',
+                'label' => 'Buang tapisan',
             ],
 
             'remove_all' => [
-                'label' => 'Buang semua penapis',
-                'tooltip' => 'Buang semua penapis',
+                'label' => 'Buang semua tapisan',
+                'tooltip' => 'Buang semua tapisan',
             ],
 
             'reset' => [
-                'label' => 'Tetapkan semula penapis',
+                'label' => 'Tetapkan semula tapisan',
             ],
 
         ],
 
-        'heading' => 'Penapis',
+        'heading' => 'Tapisan',
 
-        'indicator' => 'Penapis aktif',
+        'indicator' => 'Tapisan aktif',
 
         'multi_select' => [
             'placeholder' => 'Semua',
@@ -141,6 +145,10 @@ return [
 
         'select' => [
             'placeholder' => 'Semua',
+
+            'relationship' => [
+                'empty_option_label' => 'Tiada',
+            ],
         ],
 
         'trashed' => [
@@ -223,5 +231,7 @@ return [
         ],
 
     ],
+
+    'default_model_label' => 'rekod',
 
 ];

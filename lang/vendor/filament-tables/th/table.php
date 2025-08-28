@@ -2,7 +2,7 @@
 
 return [
 
-    'column_toggle' => [
+    'column_manager' => [
 
         'heading' => 'คอลัมน์',
 
@@ -13,7 +13,7 @@ return [
         'text' => [
 
             'actions' => [
-                'collapse_list' => 'แสดงให้น้อยกว่านี้ :count รายการ',
+                'collapse_list' => 'แสดงน้อยกว่านี้ :count รายการ',
                 'expand_list' => 'แสดงอีก :count รายการ',
             ],
 
@@ -95,7 +95,7 @@ return [
             'label' => 'การดำเนินการเป็นกลุ่ม',
         ],
 
-        'toggle_columns' => [
+        'column_manager' => [
             'label' => 'สลับคอลัมน์',
         ],
 
@@ -103,9 +103,9 @@ return [
 
     'empty' => [
 
-        'heading' => 'ไม่มี :model',
+        'heading' => 'ไม่มี:model',
 
-        'description' => 'สร้าง :model เพื่อเริ่มต้น',
+        'description' => 'เพิ่ม:modelเพื่อเริ่มต้น',
 
     ],
 

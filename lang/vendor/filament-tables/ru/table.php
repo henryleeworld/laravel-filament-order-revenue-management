@@ -1,20 +1,46 @@
 <?php
 
 return [
-    'column_toggle' => [
+
+    'column_manager' => [
 
         'heading' => 'Столбцы',
 
+        'actions' => [
+
+            'apply' => [
+                'label' => 'Применить столбцы',
+            ],
+
+            'reset' => [
+                'label' => 'Сбросить',
+            ],
+
+        ],
+
     ],
+
     'columns' => [
 
+        'actions' => [
+            'label' => 'Действие|Действия',
+        ],
+
         'text' => [
+
+            'actions' => [
+                'collapse_list' => 'Скрыть :count',
+                'expand_list' => 'Показать еще :count',
+            ],
+
             'more_list_items' => 'и :count еще',
+
         ],
 
     ],
 
     'fields' => [
+
         'bulk_select_page' => [
             'label' => 'Выбрать/снять все элементы для массовых действий.',
         ],
@@ -41,7 +67,7 @@ return [
 
         'subheadings' => [
             'all' => 'Все :label',
-            'group' => 'Cводка :group ',
+            'group' => 'Cводка :group',
             'page' => 'Эта страница',
         ],
 
@@ -60,6 +86,7 @@ return [
             ],
 
         ],
+
     ],
 
     'actions' => [
@@ -75,14 +102,16 @@ return [
         'filter' => [
             'label' => 'Фильтр',
         ],
+
         'group' => [
             'label' => 'Группировать',
         ],
+
         'open_bulk_actions' => [
             'label' => 'Открыть действия',
         ],
 
-        'toggle_columns' => [
+        'column_manager' => [
             'label' => 'Переключить столбцы',
         ],
 
@@ -93,11 +122,16 @@ return [
         'heading' => 'Не найдено :model',
 
         'description' => 'Создать :model для старта.',
+
     ],
 
     'filters' => [
 
         'actions' => [
+
+            'apply' => [
+                'label' => 'Применить фильтры',
+            ],
 
             'remove' => [
                 'label' => 'Удалить фильтр',
@@ -123,7 +157,13 @@ return [
         ],
 
         'select' => [
+
             'placeholder' => 'Все',
+
+            'relationship' => [
+                'empty_option_label' => 'Нет',
+            ],
+
         ],
 
         'trashed' => [
@@ -206,5 +246,7 @@ return [
         ],
 
     ],
+
+    'default_model_label' => 'запись',
 
 ];

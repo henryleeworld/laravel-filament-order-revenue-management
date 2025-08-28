@@ -2,7 +2,7 @@
 
 return [
 
-    'column_toggle' => [
+    'column_manager' => [
 
         'heading' => 'カラム',
 
@@ -84,7 +84,7 @@ return [
         ],
 
         'filter' => [
-            'label' => 'フィルター',
+            'label' => 'フィルタ',
         ],
 
         'group' => [
@@ -95,7 +95,7 @@ return [
             'label' => '操作を開く',
         ],
 
-        'toggle_columns' => [
+        'column_manager' => [
             'label' => '列を切り替える',
         ],
 
@@ -105,7 +105,7 @@ return [
 
         'heading' => ':modelが見つかりません',
 
-        'description' => ':modelを作成して始めてください。',
+        'description' => ':modelを作成してください。',
 
     ],
 
@@ -113,13 +113,17 @@ return [
 
         'actions' => [
 
+            'apply' => [
+                'label' => 'フィルタを適用',
+            ],
+
             'remove' => [
-                'label' => 'フィルターを解除',
+                'label' => 'フィルタを解除',
             ],
 
             'remove_all' => [
-                'label' => 'すべてのフィルターを解除',
-                'tooltip' => 'すべてのフィルターを解除',
+                'label' => 'すべてのフィルタを解除',
+                'tooltip' => 'すべてのフィルタを解除',
             ],
 
             'reset' => [
@@ -128,9 +132,9 @@ return [
 
         ],
 
-        'heading' => 'フィルター',
+        'heading' => 'フィルタ',
 
-        'indicator' => '有効なフィルター',
+        'indicator' => '有効なフィルタ',
 
         'multi_select' => [
             'placeholder' => '全件',

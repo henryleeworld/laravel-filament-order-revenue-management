@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Company;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -21,11 +22,13 @@ class OrderFactory extends Factory
         $product = Product::inRandomOrder()->first();
         $orderTime = now()->subMinutes(rand(10, 100000));
         return [
-            'user_id' => User::inRandomOrder()->value('id'),
+            'user_id' => User::inRandomOrder()->first()?->id ?? User::factory(),
             'product_id' => $product->id,
             'price' => $product->price,
             'created_at' => $orderTime,
             'updated_at' => $orderTime,
+            'is_completed' => fake()->boolean(0.5),
+            'company_id' => Company::inRandomOrder()->first()?->id ?? Company::factory(),
         ];
     }
 }

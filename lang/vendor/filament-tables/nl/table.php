@@ -2,13 +2,29 @@
 
 return [
 
-    'column_toggle' => [
+    'column_manager' => [
 
         'heading' => 'Kolommen',
+
+        'actions' => [
+
+            'apply' => [
+                'label' => 'Kolommen toepassen',
+            ],
+
+            'reset' => [
+                'label' => 'Resetten',
+            ],
+
+        ],
 
     ],
 
     'columns' => [
+
+        'actions' => [
+            'label' => 'Actie|Acties',
+        ],
 
         'text' => [
 
@@ -94,7 +110,7 @@ return [
             'label' => 'Acties openen',
         ],
 
-        'toggle_columns' => [
+        'column_manager' => [
             'label' => 'Kolommen in-/uitschakelen',
         ],
 

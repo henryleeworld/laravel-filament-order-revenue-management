@@ -2,13 +2,17 @@
 
 return [
 
-    'column_toggle' => [
+    'column_manager' => [
 
         'heading' => 'Kolumner',
 
     ],
 
     'columns' => [
+
+        'actions' => [
+            'label' => 'Åtgärd|Åtgärder',
+        ],
 
         'text' => [
 
@@ -95,7 +99,7 @@ return [
             'label' => 'Öppna åtgärder',
         ],
 
-        'toggle_columns' => [
+        'column_manager' => [
             'label' => 'Växla kolumner',
         ],
 

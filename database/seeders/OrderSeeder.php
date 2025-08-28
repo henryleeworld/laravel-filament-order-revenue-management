@@ -3,16 +3,17 @@
 namespace Database\Seeders;
 
 use App\Models\Order;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class OrderSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeders.
      */
     public function run(): void
     {
-        Order::factory(50)->create();
+        Order::factory()
+            ->count(50)
+            ->create();
     }
 }
