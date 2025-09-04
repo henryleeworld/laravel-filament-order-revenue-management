@@ -25,7 +25,7 @@ class OrderForm
                     ->label(__('Price'))
                     ->required()
                     ->numeric()
-                    ->prefix('$'),
+                    ->prefix('NT$'), // ->prefix('$')
                 Toggle::make('is_completed')
                     ->label(__('Is completed'))
                     ->required(),
